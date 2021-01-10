@@ -1,6 +1,6 @@
 # Election Analysis
 
-## Challenge Overview
+## Project Overview
 Two Colorado Board of Elections esmployee, "Tom" and "Seth", have given the following tasks to complete the election audit within a local congressional election.
 
 1. Calculate the total number of votes cast.
