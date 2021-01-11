@@ -80,12 +80,19 @@ ethnicity_votes = {}
 Then the variables names would need to be changed in the "for" loop that reads through the election_results.csv to match the newly created variables. The "for" loop would now be: 
 
 for row in reader:
-  ---total_votes = total_votes + 1
-  ---ethnicity_name = row[3]
-  ---if ethnicity_name not in ethnicity_options:
-    ethnicity_options.append(ethnicity_name)
-    ethnicity_votes[ethnicity_name] = 0
-    ethnicity_votes[ethnicity_name] += 1
+
+  total_votes = total_votes + 1
+  
+  ethnicity_name = row[3]
+  
+  if ethnicity_name not in ethnicity_options:
+  
+  ethnicity_options.append(ethnicity_name)
+  
+  ethnicity_votes[ethnicity_name] = 0
+  
+  ethnicity_votes[ethnicity_name] += 1
+  
     
 Another quick change would be to the "for" loop that helps calculate the percentage and then writes that data to the election_results.txt file. The "for" loop would now look like:
 
