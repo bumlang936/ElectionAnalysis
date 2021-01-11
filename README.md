@@ -97,14 +97,18 @@ for row in reader:
 Another quick change would be to the "for" loop that helps calculate the percentage and then writes that data to the election_results.txt file. The "for" loop would now look like:
 
 for ethnicity_name in ethnicity_votes:
+
   ethnicity_vote = ethnicity_votes[ethnicity_name]
+  
   ethnicity_vote_percentage = float(ethnicity_vote)/float(total_votes) * 100
+  
   ethnicity_results = (
+  
   f"{ethnicity_name}: {ethnicity_vote_percentage:.1f}% ({ethnicity_vote:,})\n")
+  
   print(ethnicity_results)
+  
   txt_file.write(ethnicity_results)
+  
  
 Basically the only modification that was made, was that the variable names were changed to match the data that was being analyzed. The code was written in a way that would make it easy to find totals and percentages for any data that could be valuable. So if the election_results.csv had another column that listed the voter's party affiliation, the same code could be used to find out what percentage of each party affiliation voted for a certain candidate. The only modifications needed to be made would be to create new variables that create a list and dictionary for the party affiliation values, along with changing the variables in the "for" loops so that they match the new variables that were created. So for future elections, this code can be used to help find totals and percentages of important data like ethnicity, party affiliation, age group, gender, etc. and can also be used to find the totals and percentages of that data that voted for each candidate. 
-        
-        
- 
